@@ -52,21 +52,17 @@ body {
   display: grid;
   min-height: 100vh;
   font-family: "Josefin Sans", sans-serif;
-  background: url("../img/");
   color: var(--desaturated-red);
   font-size: 16px;
   background: var(--linear-one);
 }
 
-.nav {
+.logo {
   padding: 2em;
 }
-.nav div {
-  height: 50px;
-}
-.nav__title {
+.logo__title {
   display: block;
-  width: 35%;
+  width: 40%;
 }
 
 .header__img-mobile {
@@ -150,19 +146,21 @@ body {
 @media (min-width: 1200px) {
   body {
     grid-template-columns: 1fr 0.8fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    place-items: center;
+    background: url("../img/bg-pattern-desktop.svg");
   }
-  .nav,
+  .logo,
   .main {
     padding: 2em 8em;
   }
-  .nav {
-    grid-area: 1/1/2/1;
-    display: block;
-    padding-top: 4em;
+  .logo {
+    padding-left: 0;
+    align-self: flex-start;
+    margin-bottom: 3em;
   }
-  .nav__title {
-    width: 45%;
+  .logo__title {
+    width: 100%;
   }
   .header {
     grid-area: 1/2/-1/-1;
@@ -176,8 +174,14 @@ body {
     height: 100vh;
   }
   .main {
-    grid-area: 2/1/-1/1;
+    grid-area: 1/1/4/1;
     text-align: left;
+  }
+  .main .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26em;
   }
   .main__title {
     font-size: 5.7rem;
@@ -187,6 +191,9 @@ body {
   .main__text {
     font-size: 1.5rem;
     line-height: 1.7;
+  }
+  .main__input-wrapper {
+    width: 100%;
   }
   .main__input-wrapper-icon {
     right: -3.1em;
@@ -205,9 +212,5 @@ body {
 @media (min-width: 1400px) {
   body {
     grid-template-columns: 1fr 38em;
-  }
-  .nav,
-  .main {
-    padding: 2em 12em;
   }
 }/*# sourceMappingURL=main.css.map */
