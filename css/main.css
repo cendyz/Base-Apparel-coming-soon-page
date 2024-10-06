@@ -57,12 +57,16 @@ body {
   background: var(--linear-one);
 }
 
-.logo {
+.logo-mobile {
   padding: 2em;
 }
-.logo__title {
+.logo-mobile-title {
   display: block;
   width: 40%;
+}
+
+.logo-desktop {
+  display: none;
 }
 
 .header__img-mobile {
@@ -149,17 +153,23 @@ body {
     grid-template-rows: 1fr;
     place-items: center;
     background: url("../img/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-position: center;
   }
-  .logo,
+  .logo-mobile {
+    display: none;
+  }
+  .logo-desktop,
   .main {
     padding: 2em 8em;
   }
-  .logo {
+  .logo-desktop {
+    display: block;
     padding-left: 0;
     align-self: flex-start;
     margin-bottom: 3em;
   }
-  .logo__title {
+  .logo-desktop__title {
     width: 100%;
   }
   .header {
@@ -194,6 +204,9 @@ body {
   }
   .main__input-wrapper {
     width: 100%;
+  }
+  .main__input-wrapper-box {
+    background: transparent;
   }
   .main__input-wrapper-icon {
     right: -3.1em;

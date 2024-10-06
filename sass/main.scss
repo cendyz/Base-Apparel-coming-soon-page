@@ -17,14 +17,17 @@ body {
 	font-size: 16px;
 	background: var(--linear-one);
 }
-
-.logo {
+.logo-mobile {
 	padding: 2em;
 
-	&__title {
+	&-title {
 		display: block;
 		width: 40%;
 	}
+}
+
+.logo-desktop {
+	display: none;
 }
 
 .header {
@@ -120,15 +123,22 @@ body {
 		grid-template-columns: 1fr 0.8fr;
 		grid-template-rows: 1fr;
 		place-items: center;
-		background: url('../img/bg-pattern-desktop.svg');
+		background: url("../img/bg-pattern-desktop.svg");
+		background-size: cover;
+		background-position: center;
 	}
 
-	.logo,
+	.logo-mobile {
+		display: none;
+	}
+
+	.logo-desktop,
 	.main {
 		padding: 2em 8em;
 	}
 
-	.logo {
+	.logo-desktop {
+		display: block;
 		padding-left: 0;
 		align-self: flex-start;
 		margin-bottom: 3em;
@@ -178,6 +188,10 @@ body {
 
 		&__input-wrapper {
 			width: 100%;
+
+			&-box {
+				background: transparent;
+			}
 			&-icon {
 				right: -3.1em;
 				padding: 0.9em 2.6em;
